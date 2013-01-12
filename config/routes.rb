@@ -1,4 +1,14 @@
 ActorWebsite::Application.routes.draw do
+  root :to => 'pages#home'
+
+  match '/home',   :to => 'pages#home'
+  match '/bio',    :to => 'pages#bio'
+  match '/news',   :to => 'pages#news'
+  match '/photos', :to => 'pages#photos'
+  match '/videos', :to => 'pages#videos'
+  match '/resume', :to => 'pages#resume'
+  match '/links',  :to => 'pages#links'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

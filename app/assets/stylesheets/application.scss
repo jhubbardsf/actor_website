@@ -1,0 +1,30 @@
+.container {
+  width: 1000px;
+  margin: 0px auto;
+}
+
+header {
+  background-color: red;
+
+  h1 {
+    height:  20px;
+  }
+
+  h2 {
+    padding-left: 30px;
+  }
+}
+
+.main-links {
+  background-color: green;
+  text-align: center;
+  margin: 0 auto;
+  height: 60px;
+  line-height: 60px;
+
+  a {
+    display: inline-block;
+    font-size: 30px;
+    margin: auto 5px;
+  }
+}
