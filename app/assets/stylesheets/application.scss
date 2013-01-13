@@ -32,5 +32,31 @@ header {
 }
 
 #content {
+  margin: 20px 0;
   background-color: yellow;
+
+  .centered {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.bio {
+  position:  relative;
+  .bio-pic {
+    display: inline-block;
+    width: 400px;
+    margin-right: 20px;
+  }
+
+  .bio-info {
+    position:  absolute;
+    top: 0;
+    display: inline-block;
+    width: 550px;
+  }
+}
+
+.clear {
+  clear:both;
 }
