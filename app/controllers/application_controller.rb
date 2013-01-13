@@ -4,6 +4,6 @@ class ApplicationController < ActionController::Base
   layout :set_layout
 
   def set_layout
-    request.xhr? ? false : 'application'
+    request.xhr? ? 'ajax_title' : 'application'
   end
 end
