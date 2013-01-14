@@ -1,6 +1,11 @@
 ActorWebsite::Application.routes.draw do
   root :to => 'pages#home'
 
+  resources :sessions, :only => [:new, :create, :destroy]
+
+  match '/signin',  :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
+
   match '/home',   :to => 'pages#home'
   match '/bio',    :to => 'pages#bio'
   match '/news',   :to => 'pages#news'

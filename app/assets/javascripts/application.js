@@ -5,6 +5,8 @@
 $(function () {
     $('a').click(function (event) {
         var container = $('#content');
-        $.pjax.click(event, container);
+        if (!this.data('pjax-ignore')) {
+            $.pjax.click(event, container);
+        }
     });
 });
