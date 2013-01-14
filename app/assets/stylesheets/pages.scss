@@ -1,6 +1,7 @@
 // Bio page
 .bio {
   position:  relative;
+
   .bio-pic {
     display: inline-block;
     width: 400px;
@@ -9,25 +10,17 @@
 
   .bio-info {
     position:  absolute;
-    top: 0;
     display: inline-block;
     width: 550px;
+    top: 0;
   }
 }
 
 // Photos page
 .pics {
-  .left-pic {
-    display: inline-block;
-    margin-right: 46px;
-  }
+  display: inline-block;
 
-  .middle-pic {
-    display: inline-block;
+  .album-cover:not(:last-child) {
     margin-right: 45px;
-  }
-
-  .right-pic {
-    display: inline-block;
   }
 }
