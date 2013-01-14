@@ -1,0 +1,33 @@
+// Bio page
+.bio {
+  position:  relative;
+  .bio-pic {
+    display: inline-block;
+    width: 400px;
+    margin-right: 20px;
+  }
+
+  .bio-info {
+    position:  absolute;
+    top: 0;
+    display: inline-block;
+    width: 550px;
+  }
+}
+
+// Photos page
+.pics {
+  .left-pic {
+    display: inline-block;
+    margin-right: 46px;
+  }
+
+  .middle-pic {
+    display: inline-block;
+    margin-right: 45px;
+  }
+
+  .right-pic {
+    display: inline-block;
+  }
+}
