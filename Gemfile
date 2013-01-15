@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 gem 'jquery-rails'
-gem 'haml'
+gem 'haml-rails'
 gem 'compass'
 
 # Gems used only for assets and not required
