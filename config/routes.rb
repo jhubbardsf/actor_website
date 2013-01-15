@@ -6,6 +6,8 @@ ActorWebsite::Application.routes.draw do
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
 
+  match '/admin', :to => 'admin#home'
+
   match '/home',   :to => 'pages#home'
   match '/bio',    :to => 'pages#bio'
   match '/news',   :to => 'pages#news'
