@@ -7,4 +7,10 @@ class ApplicationController < ActionController::Base
   def set_layout
     request.xhr? ? 'ajax_title' : 'application'
   end
+
+  private
+
+  def authenticate
+    deny_access unless signed_in?
+  end
 end

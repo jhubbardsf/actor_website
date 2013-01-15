@@ -4,10 +4,4 @@ class AdminController < ApplicationController
   def home
     @title = "Admin Panel"
   end
-
-  private
-
-    def authenticate
-      deny_access unless signed_in?
-    end
 end
