@@ -7,7 +7,6 @@ ActorWebsite::Application.routes.draw do
   root :to => 'pages#home'
 
   resources :sessions, :only => [:new, :create, :destroy]
-  resources :photos,   :except => [:show]
 
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
