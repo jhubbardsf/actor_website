@@ -1,5 +1,6 @@
 ActorWebsite::Application.configure do
   Paperclip.options[:command_path] = "/usr/local/bin/"
+  config.paperclip_defaults = {:storage => :fog, :fog_credentials => {:provider => "Local", :local_root => "#{Rails.root}/app/assets/images"}, :fog_directory => "", :fog_host => "localhost"}
 
   # Settings specified here will take precedence over those in config/application.rb
 

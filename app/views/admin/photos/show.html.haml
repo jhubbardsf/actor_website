@@ -1,17 +1,12 @@
-%p#notice= notice
-
 %p
   %b Caption:
   = @admin_photo.caption
 %p
   %b User:
-  = @admin_photo.user_id
+  = @admin_photo.user.username
 %p
   %b Album:
   = @admin_photo.album
-%p
-  %b Picture:
-  = image_tag @admin_photo.picture.url
 %p
   %b Medium:
   = image_tag @admin_photo.picture.url(:medium)

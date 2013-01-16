@@ -42,7 +42,7 @@ class Admin::PhotosController < ApplicationController
   # POST /admin/photos
   # POST /admin/photos.json
   def create
-    @admin_photo = Admin::Photo.new(params[:admin_photo])
+    @admin_photo = Admin::Photo.new(params[:admin_photo].merge(:user_id => current_user.id))
 
     respond_to do |format|
       if @admin_photo.save

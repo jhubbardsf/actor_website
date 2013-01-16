@@ -6,7 +6,7 @@ gem 'haml-rails'
 gem 'compass'
 gem 'paperclip', '= 3.0.4'
 gem 'cocaine', '= 0.3.2'
-#gem 'rmagick'
+
 
 # Gems used only for assets and not required
 # in production environments by default.

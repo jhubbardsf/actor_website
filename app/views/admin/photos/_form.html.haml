@@ -10,11 +10,8 @@
     = f.label :caption
     = f.text_field :caption
   .field
-    = f.label :user_id
-    = f.number_field :user_id
-  .field
     = f.label :album
-    = f.number_field :album
+    = select("admin_photo", "album", Admin::Photo::ALBUM_NAMES, {:include_blank => false})
   .field
     = f.label :picture
     = f.file_field :picture

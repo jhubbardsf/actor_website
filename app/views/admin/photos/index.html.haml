@@ -3,8 +3,8 @@
 %table
   %tr
     %th Caption
-    %th User
     %th Album
+    %th Thumbnal
     %th
     %th
     %th
@@ -12,8 +12,8 @@
   - @admin_photos.each do |admin_photo|
     %tr
       %td= admin_photo.caption
-      %td= admin_photo.user_id
       %td= admin_photo.album
+      %td= image_tag admin_photo.picture.url(:thumb)
       %td= link_to 'Show', admin_photo
       %td= link_to 'Edit', edit_admin_photo_path(admin_photo)
       %td= link_to 'Destroy', admin_photo, method: :delete, data: { confirm: 'Are you sure?' }
