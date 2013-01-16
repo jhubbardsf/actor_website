@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
             :confirmation => true,
             :length       => { :within => 6..40 }
 
+  has_many :admin_photos, :class_name => 'Admin::Photo'
+
   before_save :encrypt_password
 
   # Return true if the user's password matches the submitted password.

@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Caption:
+  = @admin_photo.caption
+%p
+  %b User:
+  = @admin_photo.user_id
+%p
+  %b Album:
+  = @admin_photo.album
+%p
+  %b Picture:
+  = image_tag @admin_photo.picture.url
+%p
+  %b Medium:
+  = image_tag @admin_photo.picture.url(:medium)
+%p
+  %b Thumbnail:
+  = image_tag @admin_photo.picture.url(:thumb)
+
+= link_to 'Edit', edit_admin_photo_path(@admin_photo)
+\|
+= link_to 'Back', admin_photos_path

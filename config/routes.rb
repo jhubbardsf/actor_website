@@ -1,4 +1,9 @@
 ActorWebsite::Application.routes.draw do
+  namespace :admin do
+    resources :photos
+  end
+
+
   root :to => 'pages#home'
 
   resources :sessions, :only => [:new, :create, :destroy]
