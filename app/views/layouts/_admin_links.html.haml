@@ -1,0 +1,5 @@
+- if signed_in?
+  .main-links.smaller
+    = link_to 'Admin Panel', admin_path
+    = link_to 'Photos', admin_photos_path
+    = link_to 'Sign Out', signout_path, 'data-pjax-ignore' => true

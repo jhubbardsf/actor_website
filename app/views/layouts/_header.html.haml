@@ -11,8 +11,5 @@
       = link_to 'Videos', videos_path
       = link_to 'Resume', resume_path
       = link_to 'Links', links_path
-      = (link_to 'Sign Out', signout_path, 'data-pjax-ignore' => true) if signed_in?
 
-    - if signed_in?
-      .main-links.smaller
-        = link_to 'Admin Panel', admin_path
+    = render 'layouts/admin_links'
