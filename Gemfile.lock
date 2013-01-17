@@ -89,6 +89,7 @@ GEM
     method_source (0.8.1)
     mime-types (1.19)
     multi_json (1.5.0)
+    newrelic_rpm (3.5.5.38)
     nokogiri (1.5.6)
     paperclip (3.0.4)
       activemodel (>= 3.0.0)
@@ -186,6 +187,7 @@ DEPENDENCIES
   guard-spork
   haml-rails
   jquery-rails
+  newrelic_rpm
   paperclip (= 3.0.4)
   paperclip-ffmpeg
   pg

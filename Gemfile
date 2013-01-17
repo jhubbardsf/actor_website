@@ -7,6 +7,7 @@ gem 'compass'
 gem 'paperclip', '= 3.0.4'
 gem 'cocaine', '= 0.3.2'
 gem 'paperclip-ffmpeg'
+gem 'newrelic_rpm'
 
 
 # Gems used only for assets and not required
