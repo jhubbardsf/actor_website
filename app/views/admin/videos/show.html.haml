@@ -11,7 +11,7 @@
   = image_tag @admin_video.video_file.url(:thumb)
 %p
   %b Video
-  = video_tag [@admin_video.video_file.url(:mp4), @admin_video.video_file.url(:ogg)], :size => "640x480", :controls => true, :autobuffer => true
+  = video_tag [@admin_video.video_file.url(:mp4)], :size => "640x480", :controls => true, :autobuffer => true
 
 = link_to 'Edit', edit_admin_video_path(@admin_video)
 \|
