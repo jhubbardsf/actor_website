@@ -1,11 +1,15 @@
 class AddAttachmentPictureToAdminPhotos < ActiveRecord::Migration
   def self.up
-    change_table :admin_photos do |t|
-      t.attachment :picture
-    end
+      add_column :admin_photos, :picture_file_name, :string
+      add_column :admin_photos, :picture_content_type, :string
+      add_column :admin_photos, :picture_file_size, :integer
+      add_column :admin_photos, :picture_updated_at, :datetime
   end
 
   def self.down
-    drop_attached_file :admin_photos, :picture
+    remove_column :admin_photos, :picture_file_name
+    remove_column :admin_photos, :picture_content_type
+    remove_column :admin_photos, :picture_file_size
+    remove_column :admin_photos, :picture_updated_at
   end
 end
