@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130116013454) do
+ActiveRecord::Schema.define(:version => 20130117000849) do
 
   create_table "admin_photos", :force => true do |t|
     t.string   "caption"
@@ -23,6 +23,17 @@ ActiveRecord::Schema.define(:version => 20130116013454) do
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
     t.string   "album"
+  end
+
+  create_table "admin_videos", :force => true do |t|
+    t.string   "title"
+    t.integer  "user_id"
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+    t.string   "video_file_file_name"
+    t.string   "video_file_content_type"
+    t.integer  "video_file_file_size"
+    t.datetime "video_file_updated_at"
   end
 
   create_table "users", :force => true do |t|
