@@ -17,3 +17,5 @@ application.js: application-5f7059a56a79f3081ca6372e418be488.js
 application/index.js: application-5f7059a56a79f3081ca6372e418be488.js
 application.css: application-37fe872844c21976fe817d133c6d3b8d.css
 application/index.css: application-37fe872844c21976fe817d133c6d3b8d.css
+pages.css: pages-5c7264abad9062aa46cf93f244fd31f7.css
+pages/index.css: pages-5c7264abad9062aa46cf93f244fd31f7.css
