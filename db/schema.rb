@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130118185502) do
+ActiveRecord::Schema.define(:version => 20130118201511) do
 
   create_table "admin_photos", :force => true do |t|
     t.string   "caption"
@@ -28,8 +28,13 @@ ActiveRecord::Schema.define(:version => 20130118185502) do
   create_table "admin_videos", :force => true do |t|
     t.string   "title"
     t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
+    t.string   "youtube_url"
+    t.string   "thumbnail_file_name"
+    t.string   "thumbnail_content_type"
+    t.integer  "thumbnail_file_size"
+    t.datetime "thumbnail_updated_at"
   end
 
   create_table "users", :force => true do |t|
