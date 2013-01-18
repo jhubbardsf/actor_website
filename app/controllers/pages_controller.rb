@@ -26,4 +26,8 @@ class PagesController < ApplicationController
   def links
     @title = "Links"
   end
+
+  def gallery
+    @title = "Gallery"
+  end
 end

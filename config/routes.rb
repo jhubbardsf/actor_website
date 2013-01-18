@@ -1,17 +1,10 @@
 ActorWebsite::Application.routes.draw do
-  namespace :admin do
-    resources :links
-  end
-
-
-  namespace :admin do
-    resources :blog_posts
-  end
-
 
   namespace :admin do
     resources :videos
     resources :photos
+    resources :blog_posts
+    resources :links
   end
 
 
@@ -22,15 +15,16 @@ ActorWebsite::Application.routes.draw do
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
 
-  match '/admin',        :to => 'admin#home'
+  match '/admin',   :to => 'admin#home'
 
-  match '/home',   :to => 'pages#home'
-  match '/bio',    :to => 'pages#bio'
-  match '/news',   :to => 'pages#news'
-  match '/photos', :to => 'pages#photos'
-  match '/videos', :to => 'pages#videos'
-  match '/resume', :to => 'pages#resume'
-  match '/links',  :to => 'pages#links'
+  match '/home',       :to => 'pages#home'
+  match '/bio',        :to => 'pages#bio'
+  match '/news',       :to => 'pages#news'
+  match '/photos',     :to => 'pages#photos'
+  match '/videos',     :to => 'pages#videos'
+  match '/resume',     :to => 'pages#resume'
+  match '/links',      :to => 'pages#links'
+  match '/photos/:id', :to => 'pages#gallery'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

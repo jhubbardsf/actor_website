@@ -38,6 +38,9 @@ ActorWebsite::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
+  # Fake assets directory so they are no served in development
+  config.assets.prefix = "/assets_dev"
+
 end
 
 
