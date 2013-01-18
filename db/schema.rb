@@ -11,11 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130118205431) do
+ActiveRecord::Schema.define(:version => 20130118205618) do
 
   create_table "admin_blog_posts", :force => true do |t|
     t.string   "title"
     t.string   "article"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "admin_links", :force => true do |t|
+    t.string   "link"
+    t.string   "title"
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

@@ -1,5 +1,10 @@
 ActorWebsite::Application.routes.draw do
   namespace :admin do
+    resources :links
+  end
+
+
+  namespace :admin do
     resources :blog_posts
   end
 
