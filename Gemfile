@@ -9,6 +9,7 @@ gem 'cocaine', '= 0.3.2'
 gem 'paperclip-ffmpeg'
 gem 'newrelic_rpm'
 gem 'airbrake'
+gem 'fancybox-rails'
 
 
 # Gems used only for assets and not required

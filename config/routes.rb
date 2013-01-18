@@ -7,7 +7,6 @@ ActorWebsite::Application.routes.draw do
     resources :links
   end
 
-
   root :to => 'pages#home'
 
   resources :sessions, :only => [:new, :create, :destroy]
@@ -24,7 +23,7 @@ ActorWebsite::Application.routes.draw do
   match '/videos',     :to => 'pages#videos'
   match '/resume',     :to => 'pages#resume'
   match '/links',      :to => 'pages#links'
-  match '/photos/:id', :to => 'pages#gallery'
+  match '/photos/:id', :to => 'pages#gallery', :as => 'gallery'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
