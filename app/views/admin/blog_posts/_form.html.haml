@@ -1,0 +1,19 @@
+= form_for @admin_blog_post do |f|
+  - if @admin_blog_post.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@admin_blog_post.errors.count, "error")} prohibited this admin_blog_post from being saved:"
+      %ul
+        - @admin_blog_post.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :article
+    = f.text_field :article
+  .field
+    = f.label :user_id
+    = f.number_field :user_id
+  .actions
+    = f.submit 'Save'
