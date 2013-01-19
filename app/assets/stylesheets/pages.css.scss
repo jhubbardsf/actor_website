@@ -39,7 +39,7 @@
     margin-bottom: 20px;
     vertical-align: middle;
     &:not(:nth-child(3n)) {
-      margin-right: 40px;
+      margin-right: 35px;
     }
     img {
       position: absolute;
@@ -53,9 +53,3 @@
   }
 
 }
-
-#tip7-title { text-align: left; }
-
-#tip7-title b { display: block; margin-right: 80px; }
-
-#tip7-title span { float: right; }

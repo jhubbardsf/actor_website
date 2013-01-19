@@ -13,15 +13,11 @@ $(function () {
         $.pjax.click(event, container);
     });
 
-//    $(document).on('click', 'a.fancybox', function () {
-////        $.fancybox({
-////            'title': $(this).data('title')
-////        }, this);
-//
-//        $(this).fancybox();
-//        return false;
-//    });
-
     $('a.fancybox').fancybox();
 
+    $(document).ajaxStop(function() {
+        $("a.fancybox").fancybox();
+    });
 });
+
+
