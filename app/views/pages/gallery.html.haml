@@ -1,1 +1,8 @@
 .gallery-container
+  - if @images.nil?
+    No Images
+  - else
+    - @images.each do |image|
+      .photo-container
+        = link_to image_tag(image.picture(:thumb)), image.picture(:medium), :class => 'fancybox',
+          :'data-pjax-ignore' => 'true', :title => image.caption, :rel => image.album

@@ -1,6 +1,6 @@
 // Bio page
 .bio {
-  position:  relative;
+  position: relative;
 
   .bio-pic {
     display: inline-block;
@@ -9,7 +9,7 @@
   }
 
   .bio-info {
-    position:  absolute;
+    position: absolute;
     display: inline-block;
     width: 550px;
     top: 0;
@@ -28,5 +28,34 @@
 // Gallery
 .gallery-container {
   height: 500px;
-  border: 2px black;
+  overflow: scroll;
+  padding-top: 10px;
+
+  .photo-container {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+    vertical-align: middle;
+    &:not(:nth-child(3n)) {
+      margin-right: 40px;
+    }
+    img {
+      position: absolute;
+      display: block;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
 }
+
+#tip7-title { text-align: left; }
+
+#tip7-title b { display: block; margin-right: 80px; }
+
+#tip7-title span { float: right; }
