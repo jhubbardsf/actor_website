@@ -1,2 +1,8 @@
-<h1>Pages#videos</h1>
-<p>Find me in app/views/pages/videos.html.erb</p>
+.gallery-container
+  - if @videos.nil?
+    No Images
+  - else
+    - @videos.each do |video|
+      .photo-container
+        = link_to image_tag(video.thumbnail(:thumb)), video.youtube_url, :class => 'fancybox-video',
+          :'data-pjax-ignore' => 'true', :title => video.title, :rel => 'youtube_video'
