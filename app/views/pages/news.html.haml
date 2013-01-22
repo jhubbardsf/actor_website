@@ -1,2 +1,8 @@
-<h1>Pages#news</h1>
-<p>Find me in app/views/pages/news.html.erb</p>
+- @posts.each do |post|
+  .blog-post
+    %p.blog-title
+      = post.title
+    %p.blog-date
+      = post.created_at.to_s(:simple_date)
+    %p.blog-article
+      = simple_format(post.article)

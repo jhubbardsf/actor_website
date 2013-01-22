@@ -9,6 +9,8 @@ class PagesController < ApplicationController
 
   def news
     @title = "Latest News"
+
+    @posts = Admin::BlogPost.all(:order => :created_at)
   end
 
   def photos
@@ -28,6 +30,8 @@ class PagesController < ApplicationController
 
   def links
     @title = "Links"
+
+    @links = Admin::Link.all(:order => :created_at)
   end
 
   def gallery

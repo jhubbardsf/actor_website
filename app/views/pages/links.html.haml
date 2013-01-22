@@ -1,2 +1,6 @@
-<h1>Pages#links</h1>
-<p>Find me in app/views/pages/links.html.erb</p>
+%h1 Relevant Links
+
+- @links.each do |link|
+  %ul
+    %li
+      = link_to link.title, link.link
