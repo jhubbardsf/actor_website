@@ -1,8 +1,8 @@
 - @posts.each do |post|
   .blog-post
-    %p.blog-title
+    .blog-title
       = post.title
-    %p.blog-date
+    .blog-date
       = post.created_at.to_s(:simple_date)
-    %p.blog-article
-      = simple_format(post.article)
+
+    = simple_format(post.article)

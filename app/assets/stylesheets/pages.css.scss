@@ -5,9 +5,16 @@
   position: relative;
 
   .bio-pic {
+    $box-shadow-option: inset 0 0 100px #000;
+
+    @include border-radius(10px);
+    @include box-shadow($box-shadow-option, $box-shadow-option, $box-shadow-option);
+
     display: inline-block;
     width: 400px;
     margin-right: 20px;
+    background: url("main2resized.jpg");
+    height: 600px;
   }
 
   .bio-info {
@@ -71,4 +78,27 @@
 #resume-frame {
   width: 100%;
   height: 550px;
+}
+
+// Blog
+.blog-post {
+  margin: 0px 30px;
+
+  &:not(:last-child) {
+    border-bottom: 2px black solid;
+  }
+  .blog-title {
+    font-size: 25px;
+    font-weight: bolder;
+    margin: 15px 0;
+  }
+
+  .blog-date {
+    font-weight: bold;
+    margin: 10px 0;
+  }
+
+  p {
+    text-indent: 20px;
+  }
 }
