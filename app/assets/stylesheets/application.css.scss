@@ -4,6 +4,14 @@
  *= require fancybox
  *= require_tree
  */
+@import 'compass/css3';
+$lavender: #9457EB;
+
+html {
+  body {
+    background-color: #FFFFFF;
+  }
+}
 
 .container {
   width: 1000px;
@@ -11,41 +19,46 @@
 }
 
 header {
-  background-color: red;
+  .title-area {
+    margin-left: 30px;
+    font-family: "Helvetica";
+    color: $lavender;
+    h1 {
+      height: 20px;
+    }
 
-  h1 {
-    height: 20px;
-  }
-
-  h2 {
-    padding-left: 30px;
-  }
-}
-
-.main-links {
-  background-color: green;
-  text-align: center;
-  margin: 0 auto;
-  //height: 60px;
-  line-height: 60px;
-
-  a {
-    display: inline-block;
-    font-size: 30px;
-    margin: auto 5px;
-  }
-
-  &.smaller {
-    line-height: 30px;
-    a {
-      font-size: 20px !important;
+    h2 {
+      padding-left: 40px;
     }
   }
+
+  .main-links {
+    @include border-radius(10px);
+    background-color: $lavender;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 60px;
+
+    a {
+      display: inline-block;
+      font-size: 30px;
+      margin: auto 10px;
+      color: white;
+      text-decoration: none;
+    }
+
+    &.smaller {
+      line-height: 30px;
+      a {
+        font-size: 20px !important;
+      }
+    }
+  }
+
 }
 
 #content {
-  margin: 20px 0;
-  background-color: yellow;
+  margin: 20px 0px;
 
   .centered {
     display: block;
