@@ -1,3 +1,5 @@
+@import 'compass/css3';
+
 // Bio page
 .bio {
   position: relative;
@@ -20,8 +22,14 @@
 .pics {
   display: inline-block;
 
-  .album-cover:not(:last-child) {
-    margin-right: 45px;
+  .album-cover {
+    img {
+      @include single-box-shadow(#333333, 10px, 10px, 5px, false, false);
+    }
+
+    &:not(:last-child) {
+      margin-right: 45px;
+    }
   }
 }
 
@@ -30,12 +38,19 @@
   padding-top: 10px;
 
   .photo-container {
+    @include single-box-shadow(#333333, 10px, 10px, 5px, false, false);
+    background-color: black;
     position: relative;
+    border: 1px black solid;
     display: inline-block;
     width: 300px;
     height: 300px;
     margin-bottom: 20px;
     vertical-align: middle;
+    &.video {
+      height: 200px;
+    }
+
     &:not(:nth-child(3n)) {
       margin-right: 35px;
     }
