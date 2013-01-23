@@ -13,6 +13,11 @@ $(function () {
         $.pjax.click(event, container);
     });
 
+    $(document).on('click', '.main-links > a', function(event) {
+        $('.main-links > a').removeClass('selected');
+        $(this).addClass('selected');
+    });
+
     $('a.fancybox').fancybox(fancyBoxOptions);
     $('a.fancybox-video').fancybox({
         'padding': 0,
