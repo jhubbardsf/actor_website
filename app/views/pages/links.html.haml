@@ -1,6 +1,8 @@
-%h1 Relevant Links
-
 - @links.each do |link|
-  %ul
-    %li
-      = link_to link.title, link.link
+  .blog-post
+    .blog-title
+      = link.title
+    .blog-date
+      = link_to link.link, link.link
+
+    = simple_format(link.description)
