@@ -1,7 +1,7 @@
 .login
   %h1= 'Sign in'
 
-  = form_for(:session, :url => sessions_path) do |f|
+  = form_for(:session, :url => sessions_path, :html => { :id => 'signin-form' }) do |f|
     .field
       = f.label :username
       %br

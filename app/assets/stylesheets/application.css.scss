@@ -7,14 +7,16 @@
 @import 'compass/css3';
 
 $lavender: #120A8F;
-$backdrop-lavender: #6860DB; //#7E78DE;
+$backdrop-lavender: #6860DB;
+//#7E78DE;
 
 .container {
   width: 1010px;
   padding: 0 5px;
   margin: 0px auto;
   border: 2px black solid;
-  background: #DBDBDB; //#E5E4E2;
+  background: #DBDBDB;
+  //#E5E4E2;
   @include border-radius(10px);
 }
 
@@ -81,6 +83,7 @@ header {
     // For admin header
     &.smaller {
       line-height: 30px;
+      margin-left: 0px;
       a {
         font-size: 20px !important;
       }
@@ -110,4 +113,33 @@ header {
 
 #front-pic {
   @include single-box-shadow(#333333, 10px, 10px, 5px, false, false);
+}
+
+.login {
+  h1 {
+    text-align: center;
+  }
+
+  #signin-form {
+    margin: 0 auto;
+    width: 200px;
+    border: 1px solid black;
+    padding: 10px;
+  }
+}
+
+form {
+  label {
+    font-weight: bold;
+  }
+
+  input {
+    @include border-radius;
+    height: 25px;
+  }
+
+  .actions {
+    width: 100%;
+    text-align: center;
+  }
 }
