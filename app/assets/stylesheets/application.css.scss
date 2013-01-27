@@ -1,30 +1,31 @@
 //Lavender Indigo (Hex: #9457EB) (RGB: 148, 87, 235)
 /*
- *= require_self
- *= require fancybox
- *= require_tree
- */
+*= require_self
+*= require fancybox
+*= require_tree
+*/
 @import 'compass/css3';
 
-$lavender: #120A8F;
+$lavender: #063273;
 $backdrop-lavender: #6860DB;
+$font: "Palatino";
 //#7E78DE;
 
 .container {
   width: 1010px;
   padding: 0 5px;
   margin: 0px auto;
-  border: 2px black solid;
+  border: 2px #E8E8E8 solid;
   //background: #DBDBDB;
   @include background-image(linear-gradient(bottom, #E8E8E8 33%, #D9D9D9 67%, #A8A8A8 84%));
-  @include border-radius(10px);
-  @include single-box-shadow(#333333, 0px, 0px, 5px, false, false);
+  //@include border-radius(10px);
+  //@include single-box-shadow(#333333, 0px, 0px, 5px, false, false);
 }
 
 header {
   .title-area {
     margin-left: 30px;
-    font-family: "Helvetica";
+    font-family: $font;
     color: $lavender;
     h1 {
       height: 10px;
@@ -36,9 +37,11 @@ header {
     }
   }
 
+  $background-gradient: linear-gradient(bottom, #063273 38%, #3A73C2 85%);
   .main-links {
-    @include background-image(linear-gradient(bottom, #130A8F 41%, #8F88F2 86%));
+    @include background-image($background-gradient);
     text-align: center;
+    font-family: $font;
     margin: 0 auto;
     line-height: 60px;
     height: 60px;
@@ -68,10 +71,11 @@ header {
 
     a {
       @include transition-duration(0.2s);
-      @include background-image(linear-gradient(bottom, #130A8F 41%, #8F88F2 86%));
+      @include background-image($background-gradient);
       float: left;
       display: inline-block;
       font-size: 30px;
+      font-size: 20px;
       padding: 0px 16px;
       color: white;
       text-decoration: none;
@@ -118,15 +122,18 @@ header {
 .clear {
   clear: both;
 }
-
-@media screen and (max-height: 650px) {
-  #fancybox-content {
-    margin-top: -140px !important;
-  }
-}
+//
+//@media screen and (max-height: 650px) {
+//  #fancybox-content {
+//    margin-top: -140px !important;
+//  }
+//}
 
 #front-pic {
   @include single-box-shadow(#333333, 10px, 10px, 5px, false, false);
+  //border: 1px solid #4C3C1B;
+  //padding: 10px;
+  //background-color: white;
 }
 
 .login {

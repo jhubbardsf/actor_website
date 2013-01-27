@@ -1,6 +1,13 @@
 .pics
-  = link_to image_tag('headshotmain.jpg'), gallery_path(:headshot), :class => 'album-cover'
-
-  = link_to image_tag('stillshotmain.jpg'), gallery_path(:still), :class => 'album-cover'
-
-  = link_to image_tag('modelshotmain.jpg'), gallery_path(:model) ,:class => 'album-cover'
+  .gallery-holder
+    = link_to image_tag('headshotmain.jpg'), gallery_path(:headshot), :class => 'album-cover'
+    .album-size
+      = "#{@headshotsize} Photos"
+  .gallery-holder
+    = link_to image_tag('stillshotmain.jpg'), gallery_path(:still), :class => 'album-cover'
+    .album-size
+      = "#{@stillsize} Photos"
+  .gallery-holder
+    = link_to image_tag('modelshotmain.jpg'), gallery_path(:model) ,:class => 'album-cover'
+    .album-size
+      = "#{@modelsize} Photos"

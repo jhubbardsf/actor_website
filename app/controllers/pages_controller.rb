@@ -15,6 +15,10 @@ class PagesController < ApplicationController
 
   def photos
     @title = "Photos"
+
+    @headshotsize = Admin::Photo.find_all_by_album("headshot").count
+    @stillsize = Admin::Photo.find_all_by_album("still").count
+    @modelsize = Admin::Photo.find_all_by_album("model").count
   end
 
   def videos
