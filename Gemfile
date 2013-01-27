@@ -9,6 +9,7 @@ gem 'paperclip-ffmpeg'
 gem 'newrelic_rpm'
 gem 'airbrake'
 gem 'fancybox-rails'
+gem 'pg'
 
 
 # Gems used only for assets and not required
@@ -21,7 +22,6 @@ group :assets do
 end
 
 group :development, :test do
-  gem 'sqlite3'
   gem 'guard-spork'
   gem 'rspec-rails', '2.8.1'
   gem 'annotate'
@@ -33,10 +33,6 @@ group :test do
   gem 'spork-rails'
   gem 'factory_girl_rails', '1.0'
   gem 'rb-fsevent', '~> 0.9.1'
-end
-
-group :production, :staging do
-  gem 'pg'
 end
 
 # To use ActiveModel has_secure_password
