@@ -11,8 +11,8 @@ test: &TEST
   encoding: utf8
   database: acting_website_test
   pool: 5
-  username: 
-  password:
+  username: rails
+  password: password
 
 production:
   adapter: postgresql
