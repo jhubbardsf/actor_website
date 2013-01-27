@@ -24,8 +24,8 @@ $(function () {
         $.pjax.click(event, container);
     });
 
-    $(document).on('click', '.main-links > a', function (event) {
-        $('.main-links > a').removeClass('selected');
+    $(document).on('click', 'li > a', function (event) {
+        $('li > a').removeClass('selected');
         $(this).addClass('selected');
     });
 

@@ -1,8 +1,14 @@
 - if signed_in?
-  .main-links.smaller
-    = link_to 'Admin Panel', admin_path
-    = link_to 'Photos', admin_photos_path
-    = link_to 'Videos', admin_videos_path
-    = link_to 'Blog Posts', admin_blog_posts_path
-    = link_to 'Links', admin_links_path
-    = link_to 'Sign Out', signout_path, 'data-pjax-ignore' => true
+  %ul.main-links.smaller
+    %li
+      = link_to 'Admin Panel', admin_path
+    %li
+      = link_to 'Photos', admin_photos_path
+    %li
+      = link_to 'Videos', admin_videos_path
+    %li
+      = link_to 'Blog Posts', admin_blog_posts_path
+    %li
+      = link_to 'Links', admin_links_path
+    %li
+      = link_to 'Sign Out', signout_path, 'data-pjax-ignore' => true

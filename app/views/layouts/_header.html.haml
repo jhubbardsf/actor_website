@@ -2,15 +2,22 @@
   .title-area
     %h1= 'Iris McLean'
     %h2= 'the official site'
-  .main-links
+  %ul.main-links
     .triangle.left
     .triangle.right
-    = link_to 'Home', home_path, :class => "#{"selected" if current_page?(['pages', 'home'])}"
-    = link_to 'Biography', bio_path, :class => "#{"selected" if current_page?(['pages', 'bio'])}"
-    = link_to 'Latest News', news_path, :class => "#{"selected" if current_page?(['pages', 'news'])}"
-    = link_to 'Photos', photos_path, :class => "#{"selected" if current_page?(['pages', 'photos'], ['pages', 'gallery'])}"
-    = link_to 'Videos', videos_path, :class => "#{"selected" if current_page?(['pages', 'videos'])}"
-    = link_to 'Resume', resume_path, :class => "#{"selected" if current_page?(['pages', 'resume'])}"
-    = link_to 'Links', links_path, :class => "#{"selected" if current_page?(['pages', 'links'])}"
+    %li
+      = link_to 'Home', home_path, :class => "#{"selected" if current_page?(['pages', 'home'])}"
+    %li
+      = link_to 'Biography', bio_path, :class => "#{"selected" if current_page?(['pages', 'bio'])}"
+    %li
+      = link_to 'Latest News', news_path, :class => "#{"selected" if current_page?(['pages', 'news'])}"
+    %li
+      = link_to 'Photos', photos_path, :class => "#{"selected" if current_page?(['pages', 'photos'], ['pages', 'gallery'])}"
+    %li
+      = link_to 'Videos', videos_path, :class => "#{"selected" if current_page?(['pages', 'videos'])}"
+    %li
+      = link_to 'Resume', resume_path, :class => "#{"selected" if current_page?(['pages', 'resume'])}"
+    %li
+      = link_to 'Links', links_path, :class => "#{"selected" if current_page?(['pages', 'links'])}"
 
   = render 'layouts/admin_links'
