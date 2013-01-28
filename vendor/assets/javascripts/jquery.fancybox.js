@@ -15,7 +15,7 @@
  *   http://www.gnu.org/licenses/gpl.html
  */
 
-(function() {
+(function($) {
 	var tmp, loading, overlay, wrap, outer, content, close, title, nav_left, nav_right,
 
 		selectedIndex = 0, selectedOpts = {}, selectedArray = [], currentIndex = 0, currentOpts = {}, currentArray = [],
@@ -26,7 +26,7 @@
 
 		titleHeight = 0, titleStr = '', start_pos, final_pos, busy = false, fx = $.extend($('<div/>')[0], { prop: 0 }),
 
-		isIE6 = false && jQuery.browser.version < 7 && !window.XMLHttpRequest,
+		isIE6 = jQuery.browser.msie && jQuery.browser.version < 7 && !window.XMLHttpRequest,
 
 		/*
 		 * Private methods 
