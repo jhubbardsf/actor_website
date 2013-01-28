@@ -60,6 +60,6 @@ module ActorWebsite
     config.assets.version = '1.0'
 
     config.assets.initialize_on_precompile = false
-    config.assets.precompile += ['pages.css']
+    config.assets.precompile += ['pages.css', 'admin.css']
   end
 end
