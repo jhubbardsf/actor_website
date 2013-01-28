@@ -10,8 +10,8 @@ gem 'newrelic_rpm'
 gem 'airbrake'
 gem 'fancybox-rails'
 gem 'pg'
-gem 'sqlite3'
-gem 'taps'
+//gem 'sqlite3'
+//gem 'taps'
 
 
 # Gems used only for assets and not required
