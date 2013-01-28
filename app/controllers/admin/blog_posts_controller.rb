@@ -2,7 +2,7 @@ class Admin::BlogPostsController < ApplicationController
   # GET /admin/blog_posts
   # GET /admin/blog_posts.json
   def index
-    @admin_blog_posts = Admin::BlogPost.all
+    @admin_blog_posts = Admin::BlogPost.paginate(:page => params[:page], :per_page => 5)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -40,7 +40,7 @@ class Admin::BlogPostsController < ApplicationController
   # POST /admin/blog_posts
   # POST /admin/blog_posts.json
   def create
-    @admin_blog_post = Admin::BlogPost.new(params[:admin_blog_post])
+    @admin_blog_post = Admin::BlogPost.new(params[:admin_blog_post].merge(:user_id => current_user.id))
 
     respond_to do |format|
       if @admin_blog_post.save

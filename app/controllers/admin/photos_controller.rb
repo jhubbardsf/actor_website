@@ -4,7 +4,7 @@ class Admin::PhotosController < ApplicationController
   # GET /admin/photos
   # GET /admin/photos.json
   def index
-    @admin_photos = Admin::Photo.all
+    @admin_photos = Admin::Photo.paginate(:page => params[:page], :per_page => 5)
 
     respond_to do |format|
       format.html # index.html.erb

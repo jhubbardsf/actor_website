@@ -17,6 +17,7 @@
       %td= link_to 'Show', admin_photo
       %td= link_to 'Edit', edit_admin_photo_path(admin_photo)
       %td= link_to 'Destroy', admin_photo, method: :delete, data: { confirm: 'Are you sure?' }
+  = render :partial => 'admin/show_pagination', :locals => { :collection => @admin_photos }
 
 %br
 

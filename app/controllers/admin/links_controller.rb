@@ -2,7 +2,7 @@ class Admin::LinksController < ApplicationController
   # GET /admin/links
   # GET /admin/links.json
   def index
-    @admin_links = Admin::Link.all
+    @admin_links = Admin::Link.paginate(:page => params[:page], :per_page => 10)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -40,7 +40,7 @@ class Admin::LinksController < ApplicationController
   # POST /admin/links
   # POST /admin/links.json
   def create
-    @admin_link = Admin::Link.new(params[:admin_link])
+    @admin_link = Admin::Link.new(params[:admin_link].merge(:user_id => current_user.id))
 
     respond_to do |format|
       if @admin_link.save

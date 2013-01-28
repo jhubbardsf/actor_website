@@ -1,22 +1,23 @@
-%h1 Listing admin_links
+%h1
+  Link Index
 
 %table
   %tr
     %th Link
     %th Title
-    %th User
     %th
     %th
     %th
 
   - @admin_links.each do |admin_link|
     %tr
-      %td= admin_link.link
+      %td= link_to "Click Here", admin_link.link
       %td= admin_link.title
-      %td= admin_link.user_id
       %td= link_to 'Show', admin_link
       %td= link_to 'Edit', edit_admin_link_path(admin_link)
       %td= link_to 'Destroy', admin_link, method: :delete, data: { confirm: 'Are you sure?' }
+
+  = render :partial => 'admin/show_pagination', :locals => { :collection => @admin_links }
 
 %br
 

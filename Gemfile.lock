@@ -189,6 +189,7 @@ GEM
       nokogiri (>= 1.2.0)
       rack (>= 1.0)
       rack-test (>= 0.5.3)
+    will_paginate (3.0.4)
 
 PLATFORMS
   ruby
@@ -207,7 +208,7 @@ DEPENDENCIES
   newrelic_rpm
   paperclip (= 3.0.4)
   paperclip-ffmpeg
-  pg
+  pg (= 0.14.1)
   rails (= 3.2.11)
   rb-fsevent (~> 0.9.1)
   rspec (= 2.8.0)
@@ -216,3 +217,4 @@ DEPENDENCIES
   spork-rails
   uglifier (>= 1.0.3)
   webrat (= 0.7.1)
+  will_paginate (= 3.0.4)
