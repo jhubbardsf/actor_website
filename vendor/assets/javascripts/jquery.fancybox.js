@@ -26,7 +26,7 @@
 
 		titleHeight = 0, titleStr = '', start_pos, final_pos, busy = false, fx = $.extend($('<div/>')[0], { prop: 0 }),
 
-		isIE6 = jQuery.browser.msie && jQuery.browser.version < 7 && !window.XMLHttpRequest,
+        isIE6 = navigator.userAgent.match(/msie/i) && navigator.userAgent.match(/6/) && !window.XMLHttpRequest,
 
 		/*
 		 * Private methods 
