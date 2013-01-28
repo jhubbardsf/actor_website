@@ -40,7 +40,7 @@ class Admin::VideosController < ApplicationController
   # POST /admin/videos
   # POST /admin/videos.json
   def create
-    @admin_video = Admin::Video.new(params[:admin_video])
+    @admin_video = Admin::Video.new(params[:admin_video].merge(:user_id => current_user.id))
 
     respond_to do |format|
       if @admin_video.save

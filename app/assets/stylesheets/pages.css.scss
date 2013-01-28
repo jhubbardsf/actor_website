@@ -84,6 +84,9 @@ $font: "Palatino";
     vertical-align: middle;
     &.video {
       height: 200px;
+      img {
+        width: 100%;
+      }
     }
 
     &:not(:nth-child(3n)) {
