@@ -5,7 +5,7 @@
 
 $(function () {
     var fancyBoxPictureOptions = {
-            'centerOnScroll': true
+            'centerOnScroll': false
         },
         fancyBoxVideoOptions = {
             'padding': 0,

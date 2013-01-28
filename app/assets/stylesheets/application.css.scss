@@ -121,11 +121,11 @@ header {
   clear: both;
 }
 //
-//@media screen and (max-height: 650px) {
-//  #fancybox-content {
-//    margin-top: -140px !important;
-//  }
-//}
+@media screen and (max-height: 650px) {
+  #fancybox-content {
+    margin-top: -140px !important;
+  }
+}
 
 #front-pic {
   img {
