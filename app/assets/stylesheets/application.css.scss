@@ -49,7 +49,6 @@ header {
     display: table;
     padding-left: 0px;
 
-
     li {
       display: inline-block;
       display: table-cell;
@@ -73,6 +72,17 @@ header {
       }
     }
 
+    // For admin header
+    &.smaller {
+      line-height: 30px;
+      margin-left: -22px;
+      margin-top: -13px;
+      width: 1053px;
+      a {
+        font-size: 20px !important;
+      }
+    }
+
     // For wrap around effect
     .triangle {
       position: absolute;
@@ -93,17 +103,6 @@ header {
         right: -16px;
       }
     }
-
-    // For admin header
-    &.smaller {
-      line-height: 30px;
-      margin: 0 auto;
-      margin-top: -13px;
-      width: 900px;
-      a {
-        font-size: 20px !important;
-      }
-    }
   }
 
 }
@@ -120,6 +119,7 @@ header {
 .clear {
   clear: both;
 }
+
 //
 @media screen and (max-height: 650px) {
   #fancybox-content {
