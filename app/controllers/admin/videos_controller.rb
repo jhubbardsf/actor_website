@@ -2,7 +2,7 @@ class Admin::VideosController < ApplicationController
   # GET /admin/videos
   # GET /admin/videos.json
   def index
-    @admin_videos = Admin::Video.all
+    @admin_videos = Admin::Video.paginate(:page => params[:page], :per_page => 5)
 
     respond_to do |format|
       format.html # index.html.erb

@@ -18,6 +18,8 @@
         = link_to 'Show', admin_video, :class => 'styled'
         = link_to 'Edit', edit_admin_video_path(admin_video), :class => 'styled'
         = link_to 'Destroy', admin_video, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'styled'
+  = render :partial => 'admin/show_pagination', :locals => { :collection => @admin_videos }
+
 
 %br
 
