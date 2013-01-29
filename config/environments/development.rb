@@ -1,7 +1,4 @@
 ActorWebsite::Application.configure do
-  Paperclip.options[:command_path]                       = "/usr/local/bin/"
-  config.paperclip_defaults                              = { :storage => :fog, :fog_credentials => { :provider => "Local", :local_root => "#{Rails.root}/app/assets/images" }, :fog_directory => "", :fog_host => "localhost" }
-
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
@@ -38,16 +35,17 @@ ActorWebsite::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug                                    = true
 
-  # Fake assets directory so they are no served in development
+  # Fake assets directory so they are not served in development
   config.assets.prefix                                   = "/assets_dev"
 
-  PAPERCLIP_STORAGE_OPTIONS  = {
+  Paperclip.options[:command_path]                       = "/usr/local/bin/"
+  config.paperclip_defaults                              = {
     :storage        => :s3,
     :s3_credentials => {
-      :bucket            => ENV['ACTING_S3_BUCKET_NAME'],
-      :access_key_id     => ENV['ACTING_AWS_ACCESS_KEY_ID'],
-      :secret_access_key => ENV['ACTING_AWS_SECRET_ACCESS_KEY']
+      :bucket            => ENV['S3_BUCKET_NAME'],
+      :access_key_id     => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
-  }
+  } if File.exist?(Rails.root + 'config/s3.yml')
 end
 
