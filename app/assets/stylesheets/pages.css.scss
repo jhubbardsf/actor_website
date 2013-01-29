@@ -25,6 +25,10 @@ $font: "Palatino";
     display: inline-block;
     width: 550px;
     top: 0;
+
+    p:first-of-type {
+      margin-top: 0;
+    }
   }
 }
 // Pblhotos page
