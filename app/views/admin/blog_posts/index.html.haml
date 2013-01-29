@@ -1,5 +1,7 @@
-%h1
+%h1.item-header
   News Entries
+
+= link_to 'New Blog post', new_admin_blog_post_path, :class => 'styled'
 
 %table
   %tr
@@ -25,4 +27,3 @@
 
 %br
 
-= link_to 'New Blog post', new_admin_blog_post_path

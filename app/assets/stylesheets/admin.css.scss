@@ -5,10 +5,10 @@
 @import 'compass/css3';
 
 table {
-  width: 100%;
-  border: 1px black solid;
   @include border-radius;
   @include box-shadow;
+  width: 100%;
+  border: 1px black solid;
   border-collapse: collapse;
 
   td, th {
