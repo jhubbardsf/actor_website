@@ -4,7 +4,7 @@
 
 @import 'compass/css3';
 
-table {
+table.admin {
   @include border-radius;
   @include box-shadow;
   width: 100%;
