@@ -1,4 +1,4 @@
-= form_for @admin_photo, :html => { :multipart => true } do |f|
+= form_for @admin_photo, :html => { :multipart => true, :class => 'new-item-form' } do |f|
   - if @admin_photo.errors.any?
     #error_explanation
       %h2= "#{pluralize(@admin_photo.errors.count, "error")} prohibited this admin_photo from being saved:"
@@ -9,11 +9,14 @@
   .field
     = f.label :caption
     = f.text_field :caption
+    .clear
   .field
     = f.label :album
     = select("admin_photo", "album", Admin::Photo::ALBUM_NAMES, {:include_blank => false})
+
   .field
     = f.label :picture
     = f.file_field :picture
+    .clear
   .actions
     = f.submit 'Save'

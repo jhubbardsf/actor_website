@@ -1,7 +1,6 @@
-%h1 Editing admin_photo
+%h1 Edit Photo
 
 = render 'form'
 
-= link_to 'Show', @admin_photo
-\|
-= link_to 'Back', admin_photos_path
+= link_to 'Show Photo', @admin_photo, :class => 'centered styled'
+= link_to 'Back to Index', admin_photos_path, :class => 'centered styled'

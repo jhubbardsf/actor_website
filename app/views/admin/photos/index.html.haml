@@ -1,24 +1,24 @@
-%h1 Available Photos
+%h1{ :class => 'item-header' } Available Photos
+
+= link_to 'New Photo', new_admin_photo_path, :class => 'styled'
 
 %table
   %tr
     %th Caption
     %th Album
     %th Thumbnail
-    %th
-    %th
-    %th
+    %th Options
 
   - @admin_photos.each do |admin_photo|
     %tr
       %td= admin_photo.caption
       %td= admin_photo.album.capitalize
       %td= link_to image_tag(admin_photo.picture.url(:thumb)), admin_photo.picture.url(:medium), :class => 'fancybox', :'data-pjax-ignore' => 'true', :title => admin_photo.caption, :rel => admin_photo.album
-      %td= link_to 'Show', admin_photo
-      %td= link_to 'Edit', edit_admin_photo_path(admin_photo)
-      %td= link_to 'Destroy', admin_photo, method: :delete, data: { confirm: 'Are you sure?' }
+      %td
+        = link_to 'Show', admin_photo, :class => 'styled'
+        = link_to 'Edit', edit_admin_photo_path(admin_photo), :class => 'styled'
+        = link_to 'Destroy', admin_photo, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'styled'
   = render :partial => 'admin/show_pagination', :locals => { :collection => @admin_photos }
 
 %br
 
-= link_to 'New Photo', new_admin_photo_path

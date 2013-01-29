@@ -1,4 +1,4 @@
-= form_for @admin_link do |f|
+= form_for @admin_link, :html => { :class => 'new-item-form'} do |f|
   - if @admin_link.errors.any?
     #error_explanation
       %h2= "#{pluralize(@admin_link.errors.count, "error")} prohibited this admin_link from being saved:"

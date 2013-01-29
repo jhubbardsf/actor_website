@@ -1,4 +1,4 @@
-= form_for @admin_blog_post do |f|
+= form_for @admin_blog_post, :html => { :class => 'new-item-form' } do |f|
   - if @admin_blog_post.errors.any?
     #error_explanation
       %h2= "#{pluralize(@admin_blog_post.errors.count, "error")} prohibited this admin_blog_post from being saved:"
@@ -9,8 +9,10 @@
   .field
     = f.label :title
     = f.text_field :title
+    .clear
   .field
     = f.label :article
     = f.text_area :article
+    .clear
   .actions
     = f.submit 'Save'
