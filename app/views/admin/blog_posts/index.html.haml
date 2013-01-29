@@ -1,15 +1,13 @@
 %h1.item-header
   News Entries
 
-= link_to 'New Blog post', new_admin_blog_post_path, :class => 'styled'
+= link_to 'New Blog Post', new_admin_blog_post_path, :class => 'styled'
 
 %table
   %tr
     %th Title
     %th Article
-    %th
-    %th
-    %th
+    %th Options
 
   - @admin_blog_posts.each do |admin_blog_post|
     %tr
@@ -18,11 +16,8 @@
       %td.left-align
         = simple_format(admin_blog_post.article)
       %td
-        = link_to 'Show', admin_blog_post
-      %td
-        = link_to 'Edit', edit_admin_blog_post_path(admin_blog_post)
-      %td
-        = link_to 'Destroy', admin_blog_post, method: :delete, data: { confirm: 'Are you sure?' }
+        = link_to 'Edit', edit_admin_blog_post_path(admin_blog_post), :class => 'styled'
+        = link_to 'Destroy', admin_blog_post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'styled'
   = render :partial => 'admin/show_pagination', :locals => { :collection => @admin_blog_posts }
 
 %br

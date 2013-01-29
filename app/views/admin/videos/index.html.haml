@@ -12,7 +12,8 @@
   - @admin_videos.each do |admin_video|
     %tr
       %td= admin_video.title
-      %td= link_to image_tag(admin_video.thumbnail(:thumb)), admin_video.youtube_url, :class => 'fancybox-video', :'data-pjax-ignore' => 'true', :title => admin_video.title, :rel => 'youtube_video'
+      %td= link_to image_tag(admin_video.thumbnail(:thumb)), admin_video.fancybox_url,
+      :class => 'fancybox-video', :'data-pjax-ignore' => 'true', :title => admin_video.title, :rel => 'youtube_video'
       %td
         = link_to 'Show', admin_video, :class => 'styled'
         = link_to 'Edit', edit_admin_video_path(admin_video), :class => 'styled'

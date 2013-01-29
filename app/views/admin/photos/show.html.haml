@@ -1,19 +1,17 @@
-%p
-  %b Caption:
-  = @admin_photo.caption
-%p
-  %b User:
-  = @admin_photo.user.username
-%p
-  %b Album:
-  = @admin_photo.album
-%p
-  %b Medium:
-  = image_tag @admin_photo.picture.url(:medium)
-%p
-  %b Thumbnail:
-  = image_tag @admin_photo.picture.url(:thumb)
+.admin-show
+  %p
+    %b Caption:
+    = @admin_photo.caption
+  %p
+    %b User:
+    = @admin_photo.user.username
+  %p
+    %b Album:
+    = @admin_photo.album
+  %p
+    %b Picture:
+    = link_to image_tag(@admin_photo.picture(:thumb)), @admin_photo.picture(:medium), :class => 'fancybox',
+              :'data-pjax-ignore' => 'true', :title => @admin_photo.caption, :rel => @admin_photo.album
 
-= link_to 'Edit', edit_admin_photo_path(@admin_photo)
-\|
-= link_to 'Back', admin_photos_path
+= link_to 'Edit Picture', edit_admin_photo_path(@admin_photo), :class => 'styled centered'
+= link_to 'Back to Index', admin_photos_path, :class => 'styled centered'

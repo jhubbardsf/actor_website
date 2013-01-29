@@ -25,7 +25,6 @@ class PagesController < ApplicationController
     @title = "Videos"
 
     @videos = Admin::Video.all
-    @videos.map { |x| x.youtube_url.gsub!("watch?v=", "v/")}
   end
 
   def resume

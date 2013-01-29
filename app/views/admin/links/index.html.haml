@@ -7,17 +7,15 @@
   %tr
     %th Link
     %th Title
-    %th
-    %th
-    %th
+    %th Options
 
   - @admin_links.each do |admin_link|
     %tr
       %td= link_to "Click Here", admin_link.link
       %td= admin_link.title
-      %td= link_to 'Show', admin_link
-      %td= link_to 'Edit', edit_admin_link_path(admin_link)
-      %td= link_to 'Destroy', admin_link, method: :delete, data: { confirm: 'Are you sure?' }
+      %td
+        = link_to 'Edit', edit_admin_link_path(admin_link), :class => 'styled'
+        = link_to 'Destroy', admin_link, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'styled'
 
   = render :partial => 'admin/show_pagination', :locals => { :collection => @admin_links }
 

@@ -1,7 +1,7 @@
-%h1 Edit Video
+%h1.item-header
+  Edit Video
 
 = render 'form'
 
-= link_to 'Show', @admin_video
-\|
-= link_to 'Back', admin_videos_path
+= link_to 'Show Video', @admin_video, :class => 'centered styled'
+= link_to 'Back to Index', admin_videos_path, :class => 'centered styled'

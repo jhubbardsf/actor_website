@@ -1,7 +1,6 @@
-%h1 Edit Link
+%h1.item-header
+  Edit Link
 
 = render 'form'
 
-= link_to 'Show', @admin_link
-\|
-= link_to 'Back', admin_links_path
+= link_to 'Back to Index', admin_links_path, :class => 'centered styled'

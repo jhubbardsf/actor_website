@@ -4,5 +4,5 @@
   - else
     - @videos.each do |video|
       .photo-container.video
-        = link_to image_tag(video.thumbnail(:thumb)), video.youtube_url, :class => 'fancybox-video',
+        = link_to image_tag(video.thumbnail(:thumb)), video.fancybox_url, :class => 'fancybox-video',
           :'data-pjax-ignore' => 'true', :title => video.title, :rel => 'youtube_video'

@@ -112,3 +112,26 @@ a.styled {
   margin-bottom: 10px;
 }
 
+.admin-show {
+  border: 1px solid black;
+  width: 400px;
+  margin: 0 auto 20px auto;
+  @include border-radius;
+  @include box-shadow;
+
+  p {
+    text-align: left;
+    b {
+      display: block;
+      width: 40%;
+      float: left;
+      text-align: right;
+      margin-right: 20px;
+    }
+  }
+
+  img {
+    height: 100px;
+  }
+}
+

@@ -1,7 +1,6 @@
-%h1 Editing admin_blog_post
+%h1.item-header
+  Editing Post
 
 = render 'form'
 
-= link_to 'Show', @admin_blog_post
-\|
-= link_to 'Back', admin_blog_posts_path
+= link_to 'Back to Index', admin_blog_posts_path, :class => 'centered styled'

@@ -3,4 +3,7 @@ class Admin::Video < ActiveRecord::Base
   has_attached_file :thumbnail, :styles => { :medium => "600x600", :thumb => "300x300" }
 
 
+  def fancybox_url
+    youtube_url.gsub("watch?v=", "v/")
+  end
 end
