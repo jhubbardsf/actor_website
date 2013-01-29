@@ -3,14 +3,14 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.11'
 gem 'jquery-rails'
 gem 'haml-rails'
-gem 'paperclip', '= 3.0.4'
-gem 'cocaine', '= 0.3.2'
-gem 'paperclip-ffmpeg'
+gem 'paperclip'
+#gem 'cocaine', '= 0.3.2'
 gem 'newrelic_rpm'
 gem 'airbrake'
-gem 'fancybox-rails'
+gem 'fancybox-rails', '0.1.4'
 gem 'pg', '0.14.1'
 gem 'will_paginate', '3.0.4'
+gem 'aws-sdk', '1.8.1.1'
 
 # Gems used only for assets and not required
 # in production environments by default.
