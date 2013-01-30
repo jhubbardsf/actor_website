@@ -1,4 +1,5 @@
 ActorWebsite::Application.routes.draw do
+  root :to => 'pages#home'
 
   namespace :admin do
     resources :videos
@@ -6,8 +7,6 @@ ActorWebsite::Application.routes.draw do
     resources :blog_posts
     resources :links
   end
-
-  root :to => 'pages#home'
 
   resources :sessions, :only => [:new, :create, :destroy]
 
@@ -18,6 +17,7 @@ ActorWebsite::Application.routes.draw do
 
   match '/home',       :to => 'pages#home'
   match '/bio',        :to => 'pages#bio'
+  match '/contact',    :to => 'pages#contact'
   match '/news',       :to => 'pages#news'
   match '/photos',     :to => 'pages#photos'
   match '/videos',     :to => 'pages#videos'

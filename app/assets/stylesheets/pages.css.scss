@@ -1,23 +1,46 @@
 @import 'compass/css3';
 
-
 $font: "Palatino";
 
 // Bio page
-.bio {
+.bio, .contact {
   position: relative;
 
-  .bio-pic {
+  .bio-pic, .contact-pic {
     $box-shadow-option: inset 0 0 100px #000;
 
     @include border-radius(10px);
     @include box-shadow($box-shadow-option, $box-shadow-option, $box-shadow-option);
 
     display: inline-block;
-    width: 400px;
-    margin-right: 20px;
-    background: url("main2resized.jpg");
-    height: 600px;
+
+    &.bio-pic {
+      width: 400px;
+      margin-right: 20px;
+      background: url("main2resized.jpg");
+      height: 600px;
+    }
+
+    &.contact-pic {
+      float: right;
+      width: 333px;
+      margin-right: 40px;
+      background: url("contact.jpg");
+      height: 500px;
+    }
+  }
+
+  .contact-info {
+    font-size: 150%;
+    font-family: $font;
+    text-align: center;
+    width: 300px;
+    float: left;
+    margin: 100px 0 0 200px;
+
+    p {
+      font-size:  80%;
+    }
   }
 
   .bio-info {
@@ -31,6 +54,7 @@ $font: "Palatino";
     }
   }
 }
+
 // Pblhotos page
 .pics {
   display: inline-block;
@@ -67,7 +91,6 @@ $font: "Palatino";
         //@include border-image(linear-gradient(left , #F5F5F5 16%, #D6D6D6 58%));
       }
     }
-
 
   }
 }

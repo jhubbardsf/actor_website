@@ -44,4 +44,8 @@ class PagesController < ApplicationController
       @images = Admin::Photo.find_all_by_album(params[:id])
     end
   end
+
+  def contact
+    @title = "Contact Me"
+  end
 end

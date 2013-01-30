@@ -19,5 +19,7 @@
       = link_to 'Resume', resume_path, :class => "#{"selected" if current_page?(['pages', 'resume'])}"
     %li
       = link_to 'Links', links_path, :class => "#{"selected" if current_page?(['pages', 'links'])}"
+    %li
+      = link_to 'Contact Me', contact_path, :class => "#{"selected" if current_page?(['pages', 'contact'])}"
 
   = render 'layouts/admin_links'
