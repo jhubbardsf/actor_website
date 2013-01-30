@@ -10,7 +10,7 @@ class PagesController < ApplicationController
   def news
     @title = "Latest News"
 
-    @posts = Admin::BlogPost.all(:order => :created_at)
+    @posts = Admin::BlogPost.all(:order => "created_at desc")
   end
 
   def photos
