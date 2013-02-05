@@ -9,6 +9,7 @@ ActorWebsite::Application.routes.draw do
   end
 
   resources :sessions, :only => [:new, :create, :destroy]
+  resources :users, :only => [:edit, :update]
 
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'

@@ -3,3 +3,7 @@
 
 %h3.centered
   = "Welcome #{current_user.name}!"
+
+= render :partial => "shared/flash_notice"
+
+= render :partial => "users/form"

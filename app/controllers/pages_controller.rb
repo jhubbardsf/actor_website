@@ -5,6 +5,8 @@ class PagesController < ApplicationController
 
   def bio
     @title = "Biography"
+
+    @biography = User.find_by_username('iris').biography
   end
 
   def news

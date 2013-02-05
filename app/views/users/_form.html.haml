@@ -1,0 +1,12 @@
+= form_for @user, :html => { :class => 'new-item-form', :method => :put } do |f|
+  - if @user.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@user.errors.count, "error")} prohibited this admin_link from being saved:"
+      %ul
+        - @user.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :biography
+    = f.text_area :biography
+  .actions
+    = f.submit 'Save'

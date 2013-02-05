@@ -9,11 +9,12 @@ class User < ActiveRecord::Base
   validates :password,
             :presence     => true,
             :confirmation => true,
-            :length       => { :within => 6..40 }
+            :length       => { :within => 6..40 },
+            :unless => Proc.new { |x| x.password.nil? }
 
   has_many :admin_photos, :class_name => 'Admin::Photo'
 
-  before_save :encrypt_password
+  before_save :encrypt_password, :unless => Proc.new { |x| x.password.nil? }
 
   # Return true if the user's password matches the submitted password.
   def has_password?(submitted_password)
