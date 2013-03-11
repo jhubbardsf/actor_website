@@ -1,4 +1,6 @@
 class Admin::VideosController < ApplicationController
+  before_filter :authenticate
+
   # GET /admin/videos
   # GET /admin/videos.json
   def index

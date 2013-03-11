@@ -1,4 +1,6 @@
 class Admin::LinksController < ApplicationController
+  before_filter :authenticate
+
   # GET /admin/links
   # GET /admin/links.json
   def index
