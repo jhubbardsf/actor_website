@@ -1,15 +1,18 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
+
 gem 'rails', '3.2.11'
 gem 'jquery-rails'
 gem 'haml-rails'
 gem 'paperclip', '~> 3.4.0'
-gem 'newrelic_rpm'
+gem 'newrelic_rpm', '~> 3.5.5.38'
 gem 'airbrake'
 gem 'fancybox-rails', '0.1.4'
 gem 'pg', '0.14.1'
 gem 'will_paginate', '3.0.4'
 gem 'aws-sdk', '~> 1.6.0'
+gem 'unicorn'
 
 # Gems used only for assets and not required
 # in production environments by default.

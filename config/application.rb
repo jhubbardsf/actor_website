@@ -68,5 +68,7 @@ module ActorWebsite
 
     config.assets.initialize_on_precompile = false
     config.assets.precompile += ['pages.css', 'admin.css']
+
+    config.logger = Logger.new(STDOUT)
   end
 end
