@@ -19,5 +19,5 @@ production:
   encoding: utf8
   database: acting_website_production
   pool: 5
-  username: 
+  username:
   password:
