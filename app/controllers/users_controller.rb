@@ -9,8 +9,9 @@ class UsersController < ApplicationController
         format.html { redirect_to :controller => :admin, :action => :home }
         format.json { head :no_content }
       else
-        format.html { render :action => :home }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        flash[:error] = "Error updating biography."
+        format.html { redirect_to :controller => :admin, :action => :home }
+        format.json { render :json => @user.errors, :status => :unprocessable_entity }
       end
     end
   end
