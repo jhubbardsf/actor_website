@@ -6,11 +6,14 @@ class User < ActiveRecord::Base
             :presence => true,
             :length   => { :maximum => 50 }
 
+  validates :biography,
+            :presence => true
+
   validates :password,
             :presence     => true,
             :confirmation => true,
             :length       => { :within => 6..40 },
-            :unless => Proc.new { |x| x.password.nil? }
+            :on => :create
 
   has_many :admin_photos, :class_name => 'Admin::Photo'
 
